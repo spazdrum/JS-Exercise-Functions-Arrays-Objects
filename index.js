@@ -66,7 +66,6 @@ function getName(name) {
   return ('Hello, my name is Luke');
 }
 
-console.log(getName);
 
 /**
  * ### Challenge `makeSmartPerson`
@@ -148,7 +147,10 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const the1st = inventory.find((item, index) => {
+    return index === 0
+  })
+  return `The Car is a ${the1st.car_make} ${the1st.car_model}`
 }
 
 /**
