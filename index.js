@@ -39,7 +39,7 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(id = 5, name = "Leia", email = "leia@leia.com") {
+function makePersonObject(id, name, email) {
   const personObject = {
     id: id,
     name: name,
@@ -63,7 +63,7 @@ function makePersonObject(id = 5, name = "Leia", email = "leia@leia.com") {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(name) {
-  return ('Hello, my name is Luke');
+  return (`Hello, my name is ${name.name}`);
 }
 
 
@@ -87,7 +87,7 @@ function makeSmartPerson(name) {
       return num1 + num2
     },
     speak: function () {
-      return 'Hello, my name is Sam'
+      return `Hello, my name is ${this.name}`;
     } /*speak*/
   } /*return*/
 }
